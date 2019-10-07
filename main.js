@@ -19,12 +19,18 @@ function initSite() {
 
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
-  /*   var baseImagePath = "/assets/";
-   */
-  image.src =
-    baseImagePath /* product.image */ +
-    // Check your console to see that the products are stored in the listOfProducts varible.
-    console.log(listOfProducts);
+  // Check your console to see that the products are stored in the listOfProducts varible.
+  console.log(listOfProducts);
+  // Check your console to see that the products are stored in the listOfProducts varible.
+  var firstItem = listOfProducts[0];
+
+  console.log(firstItem.title);
+  var div = document.createElement("div");
+  div.style.height = "10rem";
+  div.style.width = "10rem";
+  div.style.background = "red";
+
+  document.body.appendChild(div);
 
   // Add your code here, remember to brake your code in to smaller function blocks
   // to reduce complexity and increase readability. Each function should have
