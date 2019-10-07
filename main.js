@@ -22,15 +22,38 @@ function addProductsToWebpage() {
   // Check your console to see that the products are stored in the listOfProducts varible.
   console.log(listOfProducts);
   // Check your console to see that the products are stored in the listOfProducts varible.
-  var firstItem = listOfProducts[0];
 
-  console.log(firstItem.title);
-  var div = document.createElement("div");
-  div.style.height = "10rem";
-  div.style.width = "10rem";
-  div.style.background = "red";
+  var imageBasePath = "/assets/";
 
-  document.body.appendChild(div);
+  var mainContainer = document.createElement("div");
+  mainContainer.classList = "mainContainer";
+
+  for (var i = 0; i < listOfProducts.length; i++) {
+    var product = listOfProducts[i];
+
+    var productContainer = document.createElement("div");
+
+    var title = document.createElement("h1");
+    title.innerText = product.title;
+
+    var description = document.createElement("h4");
+    description.innerText = product.description;
+
+    var image = document.createElement("img");
+    image.src = imageBasePath + product.image;
+
+    var price = document.createElement("h3");
+    price.innerText = product.price;
+
+    productContainer.appendChild(title);
+    productContainer.appendChild(description);
+    productContainer.appendChild(image);
+    productContainer.appendChild(price);
+    mainContainer.appendChild(productContainer);
+  }
+
+  var main = document.getElementsByTagName("main")[0];
+  main.appendChild(mainContainer);
 
   // Add your code here, remember to brake your code in to smaller function blocks
   // to reduce complexity and increase readability. Each function should have
