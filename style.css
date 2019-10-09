@@ -12,7 +12,7 @@ a {
   text-decoration: none;
   color: white;
 }
-i {
+#top-icon {
   margin: 15px;
   right: 15px;
   top: 1px;
@@ -20,4 +20,35 @@ i {
   padding: 15px;
   color: white;
   font-size: 28px;
+}
+
+.button {
+  background-color: #5596F5;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  height: 50px;
+  width: 310px;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button-text {
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#cart-icon {
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.test {
+  height: 50vh;
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
 }
