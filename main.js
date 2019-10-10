@@ -31,6 +31,7 @@ function addProductsToWebpage() {
         var product = listOfProducts[i];
 
         var productContainer = document.createElement("div");
+        productContainer.classList = "productContainer";
 
         var title = document.createElement("h1");
         title.innerText = product.title;
@@ -40,15 +41,30 @@ function addProductsToWebpage() {
 
         var image = document.createElement("img");
         image.src = imageBasePath + product.image;
+        image.classList = "productPic";
 
         var price = document.createElement("h3");
         price.innerText = product.price;
+
+        var addToCart = document.createElement("button");
+        addToCart.classList = "button";
+
+        var cartText = document.createElement("p");
+        cartText.classList = "button-text";
+        cartText.innerText = "Lägg till i kundvagnen";
+
+        var cartIcon = document.createElement("i");
+        cartIcon.id = "cart-icon";
+        cartIcon.classList = "fas fa-cart-arrow-down";
 
         productContainer.appendChild(title);
         productContainer.appendChild(description);
         productContainer.appendChild(image);
         productContainer.appendChild(price);
+        productContainer.appendChild(addToCart);
         mainContainer.appendChild(productContainer);
+        addToCart.appendChild(cartIcon);
+        addToCart.appendChild(cartText);
     }
 
     var main = document.getElementsByTagName("main")[0];
