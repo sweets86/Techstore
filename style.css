@@ -69,3 +69,6 @@ a {
     height: 30em;
     object-fit: contain;
 }
+.priceStyling {
+    font-size: 1.5em;
+}
