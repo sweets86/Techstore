@@ -72,3 +72,6 @@ a {
 .priceStyling {
     font-size: 1.5em;
 }
+.noInfo {
+    margin-top: 3em;
+}

@@ -24,15 +24,20 @@ function addToCart(product) {
     // Om cart finns skall du pusha in produkten i den hämtade cart-variabeln.
     // Spara upp cart till localstorage
 
-    var cartList = [];
-    cartList.push(product);
+    // var Json_str = JSON.stringify(product);
+    // localStorage.cart = Json_str;
+    // localStorage.setItem("cart", cartList);
+    //localStorage.setItem("storageCart",Json.stringify())
 
-    localStorage.setItem("cart", cartList);
-
-    var Json_str = JSON.stringify(product);
-    localStorage.cart = Json_str;
-    var cartStorage = JSON.parse(localStorage.cart);
-    console.log(cartStorage);
+    var cartList = JSON.parse(localStorage.getItem("cart"));
+    if (cartList) {
+        cartList.push(product);
+    } else {
+        cartList = [];
+        cartList.push(product);
+    }
+    localStorage.setItem("cart", JSON.stringify(cartList));
+    console.log(cartList);
 }
 
 /** Uses the loaded products data to create a visible product list on the website */
