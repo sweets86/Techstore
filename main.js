@@ -17,10 +17,32 @@ function initSite() {
     // This would also be a good place to initialize other parts of the UI
 }
 
+function addToCart(product) {
+    // Hämta ut cart ifrån localstorage.
+    // Kolla om cart du hämtat är tom eller innehåller produkter.
+    // Om cart är tom/ej existerar vill du skapa en array och lägga in produkten.
+    // Om cart finns skall du pusha in produkten i den hämtade cart-variabeln.
+    // Spara upp cart till localstorage
+
+    // var Json_str = JSON.stringify(product);
+    // localStorage.cart = Json_str;
+    // localStorage.setItem("cart", cartList);
+    //localStorage.setItem("storageCart",Json.stringify())
+
+    var cartList = JSON.parse(localStorage.getItem("cart"));
+    if (cartList) {
+        cartList.push(product);
+    } else {
+        cartList = [];
+        cartList.push(product);
+    }
+    localStorage.setItem("cart", JSON.stringify(cartList));
+    console.log(cartList);
+}
+
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
     // Check your console to see that the products are stored in the listOfProducts varible.
-    console.log(listOfProducts);
 
     var imageBasePath = "/assets/";
 
@@ -44,10 +66,15 @@ function addProductsToWebpage() {
         image.classList = "productPic";
 
         var price = document.createElement("h3");
-        price.innerText = product.price;
+        price.classList = "priceStyling";
+        price.innerText = product.price + "   " + "kr";
 
-        var addToCart = document.createElement("button");
-        addToCart.classList = "button";
+        var addToCartButton = document.createElement("button");
+        addToCartButton.classList = "button";
+        addToCartButton.data = product;
+        addToCartButton.onclick = function() {
+            addToCart(this.data);
+        };
 
         var cartText = document.createElement("p");
         cartText.classList = "button-text";
@@ -61,15 +88,14 @@ function addProductsToWebpage() {
         productContainer.appendChild(description);
         productContainer.appendChild(image);
         productContainer.appendChild(price);
-        productContainer.appendChild(addToCart);
+        productContainer.appendChild(addToCartButton);
         mainContainer.appendChild(productContainer);
-        addToCart.appendChild(cartIcon);
-        addToCart.appendChild(cartText);
+        addToCartButton.appendChild(cartIcon);
+        addToCartButton.appendChild(cartText);
     }
 
     var main = document.getElementsByTagName("main")[0];
     main.appendChild(mainContainer);
-    console.log(listOfProducts);
 
     // Add your code here, remember to brake your code in to smaller function blocks
     // to reduce complexity and increase readability. Each function should have
