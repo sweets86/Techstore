@@ -3,10 +3,10 @@ var listOfProducts;
 /** Get products from the json file and store it in a gobal variable */
 function loadProducts() {
     fetch("./products.json")
-        .then(function(response) {
+        .then(function (response) {
             return response.json();
         })
-        .then(function(products) {
+        .then(function (products) {
             listOfProducts = products;
             addProductsToWebpage();
         });
@@ -50,7 +50,9 @@ function addProductsToWebpage() {
     // Check your console to see that the products are stored in the listOfProducts varible.
     var cartList = JSON.parse(localStorage.getItem("cart"));
 
-    count(cartList.length);
+    if (cart) {
+        count(cartList.length);
+    }
 
     var imageBasePath = "/assets/";
 
@@ -80,7 +82,7 @@ function addProductsToWebpage() {
         var addToCartButton = document.createElement("button");
         addToCartButton.classList = "button";
         addToCartButton.data = product;
-        addToCartButton.onclick = function() {
+        addToCartButton.onclick = function () {
             addToCart(this.data);
         };
 
