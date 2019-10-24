@@ -1,12 +1,16 @@
 function initSite() {
     load();
 }
+
 function load() {
     var cartList = JSON.parse(localStorage.getItem("cart"));
     if (cartList && cartList.length) {
         var imageBasePath = "/assets/";
         var mainContainer = document.createElement("div");
         mainContainer.classList = "mainContainer";
+        console.log(cartList);
+        var count = document.createElement("h1");
+        count.innerText = cartList.length;
 
         for (var i = 0; i < cartList.length; i++) {
             var product = cartList[i];
@@ -61,6 +65,7 @@ function load() {
     }
     var main = document.getElementsByTagName("main")[0];
     main.appendChild(mainContainer);
+    main.appendChild(count);
 }
 function removeItem(index) {
     var cartList = JSON.parse(localStorage.getItem("cart"));

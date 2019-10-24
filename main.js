@@ -32,17 +32,25 @@ function addToCart(product) {
     var cartList = JSON.parse(localStorage.getItem("cart"));
     if (cartList) {
         cartList.push(product);
+        count(cartList.length);
     } else {
         cartList = [];
         cartList.push(product);
+        console.log(cartList.length);
     }
     localStorage.setItem("cart", JSON.stringify(cartList));
-    console.log(cartList);
+}
+
+function count(length) {
+    document.getElementById("counter").innerText = length;
 }
 
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
     // Check your console to see that the products are stored in the listOfProducts varible.
+    var cartList = JSON.parse(localStorage.getItem("cart"));
+
+    count(cartList.length);
 
     var imageBasePath = "/assets/";
 
