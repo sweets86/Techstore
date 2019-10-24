@@ -12,8 +12,12 @@ function load() {
         var count = document.createElement("h1");
         count.innerText = cartList.length;
 
+        var totalPrice = 0;
+
         for (var i = 0; i < cartList.length; i++) {
             var product = cartList[i];
+
+            totalPrice += product.price;
 
             var productContainer = document.createElement("div");
             productContainer.classList = "productContainer";
@@ -36,7 +40,7 @@ function load() {
             removeProduct.classList = "removeButton";
             removeProduct.data = i;
             removeProduct.classList = "button";
-            removeProduct.onclick = function() {
+            removeProduct.onclick = function () {
                 removeItem(this.data);
             };
 
@@ -52,6 +56,12 @@ function load() {
             removeProduct.appendChild(buttonText);
             mainContainer.appendChild(productContainer);
         }
+
+        var priceText = document.createElement("h2");
+        priceText.innerText = totalPrice;
+        mainContainer.appendChild(priceText);
+        console.log(totalPrice)
+
         console.log(cartList);
     } else {
         var mainContainer = document.createElement("div");
@@ -67,6 +77,7 @@ function load() {
     main.appendChild(mainContainer);
     main.appendChild(count);
 }
+
 function removeItem(index) {
     var cartList = JSON.parse(localStorage.getItem("cart"));
     cartList.splice(index, 1);
