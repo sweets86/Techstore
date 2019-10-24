@@ -50,7 +50,7 @@ function addProductsToWebpage() {
     // Check your console to see that the products are stored in the listOfProducts varible.
     var cartList = JSON.parse(localStorage.getItem("cart"));
 
-    if (cart) {
+    if (cartList) {
         count(cartList.length);
     }
 
