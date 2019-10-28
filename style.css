@@ -168,3 +168,15 @@ a {
 .finishText {
     margin: 0;
 }
+
+#counter {
+    margin: 15px;
+    right: 50px;
+    top: 1px;
+    position: fixed;
+    padding: 5px;
+    color: white;
+    font-size: 34px;
+    margin-right: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+}
