@@ -11,6 +11,7 @@ function load() {
         console.log(cartList);
         var count = document.createElement("h1");
         count.innerText = cartList.length;
+        count.id = "counter";
 
         var textContainer = document.createElement("div");
         textContainer.classList = "textContainer";
