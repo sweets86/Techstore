@@ -30,13 +30,16 @@ function load() {
 
         var totalPrice = 0;
 
+        var container = document.createElement("div");
+        container.classList = "container";
+
         for (var i = 0; i < cartList.length; i++) {
             var product = cartList[i];
 
             totalPrice += product.price;
 
             var productContainer = document.createElement("div");
-            productContainer.classList = "productContainer1";
+            productContainer.classList = "productContainerCart";
 
             var image = document.createElement("img");
             image.src = imageBasePath + product.image;
@@ -66,16 +69,16 @@ function load() {
             trashIcon.id = "trash-icon";
             trashIcon.classList = "far fa-trash-alt";
 
-
-
             productContainer.appendChild(image);
             productContainer.appendChild(title);
             productContainer.appendChild(price);
             productContainer.appendChild(removeProduct);
             removeProduct.appendChild(trashIcon);
             removeProduct.appendChild(buttonText);
-            mainContainer.appendChild(productContainer);
+            container.appendChild(productContainer);
         }
+        
+        mainContainer.appendChild(container);
 
         var priceText = document.createElement("h2");
         priceText.innerText = totalPrice;
