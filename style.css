@@ -131,6 +131,30 @@ a {
     margin: 0;
 }
 
+.removeButton {
+    display: flex;
+    background-color: #E64E4E;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#trash-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.removebutton-text {
+    margin: 0;
+}
+
 .buttonContainer {
     height: 25vh;
     width: 100vw;
