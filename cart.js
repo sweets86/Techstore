@@ -54,15 +54,18 @@ function load() {
             var removeProduct = document.createElement("button");
             removeProduct.classList = "removeButton";
             removeProduct.data = i;
-            removeProduct.classList = "button";
+            removeProduct.classList = "removeButton";
             removeProduct.onclick = function () {
                 removeItem(this.data);
             };
 
             var buttonText = document.createElement("p");
-            buttonText.innerText = "Ta bort produkt";
-            buttonText.classList = "button-text";
+            buttonText.innerText = "Ta bort";
+            buttonText.classList = "removebutton-text";
 
+            var trashIcon = document.createElement("i");
+            trashIcon.id = "trash-icon";
+            trashIcon.classList = "far fa-trash-alt";
 
 
 
@@ -71,6 +74,7 @@ function load() {
             productContainer.appendChild(image);
             productContainer.appendChild(price);
             productContainer.appendChild(removeProduct);
+            removeProduct.appendChild(trashIcon);
             removeProduct.appendChild(buttonText);
             mainContainer.appendChild(productContainer);
         }
