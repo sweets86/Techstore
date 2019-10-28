@@ -12,6 +12,21 @@ function load() {
         var count = document.createElement("h1");
         count.innerText = cartList.length;
 
+        var textContainer = document.createElement("div");
+        textContainer.classList = "textContainer";
+        mainContainer.appendChild(textContainer);
+
+        var cartIcon = document.createElement("i");
+        cartIcon.id = "icon";
+        cartIcon.classList = "fas fa-shopping-cart";
+        textContainer.appendChild(cartIcon);
+        console.log(cartIcon)
+
+        var text = document.createElement("h1");
+        text.innerText = "Kundvagn";
+        text.classList = "text";
+        textContainer.appendChild(text);
+
         var totalPrice = 0;
 
         for (var i = 0; i < cartList.length; i++) {
@@ -61,6 +76,24 @@ function load() {
         priceText.innerText = totalPrice;
         mainContainer.appendChild(priceText);
         console.log(totalPrice)
+
+        var buttonContainer = document.createElement("div");
+        buttonContainer.classList = "buttonContainer";
+        mainContainer.appendChild(buttonContainer);
+
+        var finishProduct = document.createElement("button");
+        finishProduct.classList = "finishButton";
+        buttonContainer.appendChild(finishProduct);
+
+        var checkIcon = document.createElement("i");
+        checkIcon.id = "check-icon";
+        checkIcon.classList = "fas fa-check";
+        finishProduct.appendChild(checkIcon);
+
+        var buttonText = document.createElement("p");
+        buttonText.innerText = "Slutför ditt köp";
+        buttonText.classList = "finishText";
+        finishProduct.appendChild(buttonText)
 
         console.log(cartList);
     } else {

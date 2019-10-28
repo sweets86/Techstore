@@ -8,6 +8,7 @@ header {
     padding: 0px 25px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 a {
     text-decoration: none;
     color: white;
@@ -58,6 +59,7 @@ a {
     display: flex;
     align-items: flex-end;
 }
+
 .productContainer {
     display: flex;
     flex-direction: column;
@@ -69,9 +71,76 @@ a {
     height: 30em;
     object-fit: contain;
 }
+
 .priceStyling {
     font-size: 1.5em;
 }
+
 .noInfo {
     margin-top: 3em;
+}
+
+.textContainer {
+    height: 25vh;
+    width: 100vw;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#icon {
+    margin: 0;
+    margin-right: 10px;
+    padding-right: 3px;
+    padding-top: 5px;
+    font-size: 40px;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.buttonContainer {
+    height: 25vh;
+    width: 100vw;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.finishButton {
+    background-color: #5596f5;
+    display: flex;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    height: 48px;
+    width: 237px;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#check-icon {
+    margin: 0;
+    padding-right: 15px;
+    padding-top: 2px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.finishText {
+    margin: 0;
 }
