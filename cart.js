@@ -48,6 +48,9 @@ function load() {
             buttonText.innerText = "Ta bort produkt";
             buttonText.classList = "button-text";
 
+
+
+
             productContainer.appendChild(title);
             productContainer.appendChild(description);
             productContainer.appendChild(image);

@@ -8,6 +8,7 @@ header {
     padding: 0px 25px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 a {
     text-decoration: none;
     color: white;
@@ -21,7 +22,7 @@ a {
     position: fixed;
     padding: 15px;
     color: white;
-    font-size: 28px;
+    font-size: 26px;
 }
 
 .button {
@@ -45,6 +46,7 @@ a {
     justify-content: space-evenly;
     margin-left: 5px;
     margin-right: 5px;
+    padding-left: 10px;
 }
 
 #cart-icon {
@@ -58,20 +60,45 @@ a {
     display: flex;
     align-items: flex-end;
 }
+
 .productContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    font-size: 20;
+    margin-top: 5em;
 }
 
 .productPic {
     height: 30em;
     object-fit: contain;
 }
+
 .priceStyling {
-    font-size: 1.5em;
+    font-size: 20;
+    margin: 20px;
 }
+
 .noInfo {
     margin-top: 3em;
+}
+
+.mainContainer {
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 700px) and (min-width:400px) {
+    h4 {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h4 {
+        font-size: 12px;
+        white-space: nowrap;
+    }
 }
