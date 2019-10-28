@@ -57,7 +57,7 @@ function addProductsToWebpage() {
     var imageBasePath = "/assets/";
 
     var mainContainer = document.createElement("div");
-    mainContainer.classList = "mainContainer";
+    /* mainContainer.classList = "mainContainer"; */
 
     for (var i = 0; i < listOfProducts.length; i++) {
         var product = listOfProducts[i];
