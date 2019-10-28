@@ -36,14 +36,15 @@ function load() {
             totalPrice += product.price;
 
             var productContainer = document.createElement("div");
-            productContainer.classList = "productContainer";
-
-            var title = document.createElement("h1");
-            title.innerText = product.title;
+            productContainer.classList = "productContainer1";
 
             var image = document.createElement("img");
             image.src = imageBasePath + product.image;
-            image.classList = "productPic";
+            image.classList = "productPic1";
+
+            var title = document.createElement("h1");
+            title.classList = "title";
+            title.innerText = product.title;
 
             var price = document.createElement("h3");
             price.classList = "priceStyling";
@@ -67,8 +68,8 @@ function load() {
 
 
 
-            productContainer.appendChild(title);
             productContainer.appendChild(image);
+            productContainer.appendChild(title);
             productContainer.appendChild(price);
             productContainer.appendChild(removeProduct);
             removeProduct.appendChild(trashIcon);
