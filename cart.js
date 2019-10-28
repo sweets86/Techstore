@@ -41,9 +41,6 @@ function load() {
             var title = document.createElement("h1");
             title.innerText = product.title;
 
-            var description = document.createElement("h4");
-            description.innerText = product.description;
-
             var image = document.createElement("img");
             image.src = imageBasePath + product.image;
             image.classList = "productPic";
@@ -71,7 +68,6 @@ function load() {
 
 
             productContainer.appendChild(title);
-            productContainer.appendChild(description);
             productContainer.appendChild(image);
             productContainer.appendChild(price);
             productContainer.appendChild(removeProduct);
