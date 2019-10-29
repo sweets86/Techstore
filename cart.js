@@ -50,7 +50,7 @@ function load() {
             title.innerText = product.title;
 
             var price = document.createElement("h3");
-            price.classList = "priceStyling";
+            price.classList = "priceStylingCart";
             price.innerText = product.price + "   " + "kr";
 
             var removeProduct = document.createElement("button");
@@ -81,7 +81,8 @@ function load() {
         mainContainer.appendChild(container);
 
         var priceText = document.createElement("h2");
-        priceText.innerText = totalPrice;
+        priceText.innerText = "Totalt" + " " + "pris:" + " " + totalPrice + " " + "kr";
+        priceText.classList = "totalText";
         mainContainer.appendChild(priceText);
         console.log(totalPrice)
 
