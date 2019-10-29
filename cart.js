@@ -92,6 +92,10 @@ function load() {
 
         var finishProduct = document.createElement("button");
         finishProduct.classList = "finishButton";
+        finishProduct.onclick = function() {
+            alert("Tack för ditt köp och välkommen åter!")
+        }
+        
         buttonContainer.appendChild(finishProduct);
 
         var checkIcon = document.createElement("i");
