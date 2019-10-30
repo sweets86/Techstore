@@ -72,6 +72,10 @@ a {
     padding-bottom: 5em;
 }
 
+h1 {
+    font-size: 35px;
+}
+
 h4 {
     margin: 0;
     margin-bottom: 20px;
@@ -106,27 +110,6 @@ h4 {
 .mainContainer {
     margin-top: 5em;
     width: 100%;
-}
-
-@media screen and (max-width: 700px) and (min-width:400px) {
-    h4 {
-        font-size: 13px;
-        margin-bottom: 0;
-    }
-}
-
-@media screen and (max-width: 400px) {
-
-    h4 {
-        font-size: 12px;
-        white-space: nowrap;
-        margin-bottom: 0;
-    }
-
-    .container {
-        flex-wrap: wrap;
-    }
-
 }
 
 .textContainer {
@@ -233,6 +216,7 @@ h4 {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     margin-top: 3em;
@@ -252,6 +236,103 @@ h4 {
 }
 
 .title {
-    font-size: 35px;
+    font-size: 30px;
     margin: 0;
+}
+
+@media screen and (max-width: 700px) and (min-width:400px) {
+    h4 {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    body {
+        margin: 0;
+    }
+
+    h4 {
+        font-size: 12px;
+        white-space: nowrap;
+        margin-bottom: 0;
+    }
+
+    .productContainerCart {
+        margin-right: 0px;
+        margin: 8px;
+        padding: 10px;
+    }
+
+    .mainContainer {
+        padding: 24px;
+    }
+
+    .text {
+        font-size: 25px;
+    }
+
+    #icon {
+        font-size: 25px;
+    }
+
+    .textContainer {
+        padding: 0;
+    }
+
+    .container {
+        margin-top: 10px;
+    }
+
+    .productPic1 {
+        height: 7em;
+        object-fit: contain;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .priceStylingCart {
+        font-size: 13px;
+    }
+
+    .removeButton {
+        width: 100px;
+        height: 30px;
+    }
+
+    #trash-icon {
+        font-size: 13px;
+        margin-top: 1px;
+    }
+
+    .removebutton-text {
+        font-size: 14px;
+    }
+
+    .totalText {
+        font-size: 17px;
+        margin-bottom: 30px;
+        margin-top: 17px;
+    }
+
+    .finishButton {
+        width: 8em;
+        height: 40px;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+
+    .finishText {
+        font-size: 18px;
+    }
+
+    #check-icon {
+        font-size: 15px;
+        padding-right: 0;
+        padding-top: 3px;
+    }
+
 }
