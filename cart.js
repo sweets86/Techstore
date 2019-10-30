@@ -21,7 +21,7 @@ function load() {
         cartIcon.id = "icon";
         cartIcon.classList = "fas fa-shopping-cart";
         textContainer.appendChild(cartIcon);
-        console.log(cartIcon)
+        console.log(cartIcon);
 
         var text = document.createElement("h1");
         text.innerText = "Kundvagn";
@@ -57,7 +57,7 @@ function load() {
             removeProduct.classList = "removeButton";
             removeProduct.data = i;
             removeProduct.classList = "removeButton";
-            removeProduct.onclick = function () {
+            removeProduct.onclick = function() {
                 removeItem(this.data);
             };
 
@@ -77,14 +77,15 @@ function load() {
             removeProduct.appendChild(buttonText);
             container.appendChild(productContainer);
         }
-        
+
         mainContainer.appendChild(container);
 
         var priceText = document.createElement("h2");
-        priceText.innerText = "Totalt" + " " + "pris:" + " " + totalPrice + " " + "kr";
+        priceText.innerText =
+            "Totalt" + " " + "pris:" + " " + totalPrice + " " + "kr";
         priceText.classList = "totalText";
         mainContainer.appendChild(priceText);
-        console.log(totalPrice)
+        console.log(totalPrice);
 
         var buttonContainer = document.createElement("div");
         buttonContainer.classList = "buttonContainer";
@@ -93,9 +94,13 @@ function load() {
         var finishProduct = document.createElement("button");
         finishProduct.classList = "finishButton";
         finishProduct.onclick = function() {
-            alert("Tack för ditt köp och välkommen åter!")
-        }
-        
+            alert("Tack för ditt köp och välkommen åter!");
+            cartList = [];
+            localStorage.setItem("cart", JSON.stringify(cartList));
+            document.getElementsByTagName("main")[0].innerHTML = "";
+            load();
+        };
+
         buttonContainer.appendChild(finishProduct);
 
         var checkIcon = document.createElement("i");
@@ -106,7 +111,7 @@ function load() {
         var buttonText = document.createElement("p");
         buttonText.innerText = "Slutför ditt köp";
         buttonText.classList = "finishText";
-        finishProduct.appendChild(buttonText)
+        finishProduct.appendChild(buttonText);
 
         console.log(cartList);
     } else {
