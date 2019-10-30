@@ -165,7 +165,6 @@ h4 {
 .buttonContainer {
     display: flex;
     justify-content: center;
-    margin-bottom: 10em;
 }
 
 .finishButton {
@@ -181,6 +180,7 @@ h4 {
     align-self: center;
     justify-content: center;
     cursor: pointer;
+    margin-bottom: 5em;
 }
 
 #check-icon {
