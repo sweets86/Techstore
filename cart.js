@@ -127,12 +127,15 @@ function load() {
         var link = document.createElement("a");
         link.innerText = "Tryck Här!"
         link.classList = "link"
-        link.href = "http://127.0.0.1:5500/Index.html"
+        link.href = "./Index.html"
         linkText.appendChild(link)
     }
     var main = document.getElementsByTagName("main")[0];
     main.appendChild(mainContainer);
-    main.appendChild(count);
+    
+    if(count) {
+        main.appendChild(count);
+    }
 }
 
 function removeItem(index) {
