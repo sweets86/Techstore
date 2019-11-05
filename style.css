@@ -104,12 +104,28 @@ h4 {
 }
 
 .noInfo {
-    margin-top: 3em;
+    margin-top: 5em;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.linkText {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.link {
+    color:  #5596f5;
+    margin-left: 10px;
+
 }
 
 .mainContainer {
     margin-top: 5em;
-    width: 100%;
 }
 
 .textContainer {
