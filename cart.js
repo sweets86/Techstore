@@ -8,7 +8,6 @@ function load() {
         var imageBasePath = "/assets/";
         var mainContainer = document.createElement("div");
         mainContainer.classList = "mainContainer";
-        console.log(cartList);
         var count = document.createElement("h1");
         count.innerText = cartList.length;
         count.id = "counter";
@@ -21,7 +20,6 @@ function load() {
         cartIcon.id = "icon";
         cartIcon.classList = "fas fa-shopping-cart";
         textContainer.appendChild(cartIcon);
-        console.log(cartIcon);
 
         var text = document.createElement("h1");
         text.innerText = "Kundvagn";
@@ -85,7 +83,6 @@ function load() {
             "Totalt" + " " + "pris:" + " " + totalPrice + " " + "kr";
         priceText.classList = "totalText";
         mainContainer.appendChild(priceText);
-        console.log(totalPrice);
 
         var buttonContainer = document.createElement("div");
         buttonContainer.classList = "buttonContainer";
@@ -112,8 +109,6 @@ function load() {
         buttonText.innerText = "Slutför ditt köp";
         buttonText.classList = "finishText";
         finishProduct.appendChild(buttonText);
-
-        console.log(cartList);
     } else {
         var mainContainer = document.createElement("div");
         mainContainer.classList = "mainContainer";
