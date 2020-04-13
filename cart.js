@@ -127,7 +127,7 @@ function load() {
         var link = document.createElement("a");
         link.innerText = "Tryck Här!"
         link.classList = "link"
-        link.href = "./Index.html"
+        link.href = "./index.html"
         linkText.appendChild(link)
     }
     var main = document.getElementsByTagName("main")[0];
