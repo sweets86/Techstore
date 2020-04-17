@@ -38,7 +38,7 @@ function addProductsToWebpage() {
         count(cartList.length);
     }
 
-    var imageBasePath = "/assets/";
+    var imageBasePath = "./assets/";
 
     var mainContainer = document.createElement("div");
 
