@@ -5,7 +5,7 @@ function initSite() {
 function load() {
     var cartList = JSON.parse(localStorage.getItem("cart"));
     if (cartList && cartList.length) {
-        var imageBasePath = "/assets/";
+        var imageBasePath = "./assets/";
         var mainContainer = document.createElement("div");
         mainContainer.classList = "mainContainer";
         var count = document.createElement("h1");
